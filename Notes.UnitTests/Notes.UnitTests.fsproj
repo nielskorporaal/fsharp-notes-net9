@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <EnableCodeCoverage>true</EnableCodeCoverage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="*Tests.fs" />
+    <Compile Include="Core\Repositories\SqliteRepositoryTests.fs" />
+    <Compile Include="Core\Repositories\InMemoryRepositoryTests.fs" />
+    <Compile Include="Core\Repositories\Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="9.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+    <PackageReference Include="Unquote" Version="7.0.0" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Notes.Core\Notes.Core.fsproj" />
+    <ProjectReference Include="..\Notes.WebApi\Notes.WebApi.fsproj" />
+  </ItemGroup>
+
+</Project>
