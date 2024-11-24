@@ -1,0 +1,18 @@
+@host=http://localhost
+@port=5000
+
+// Add a new note
+POST {{host}}:{{port}}/note
+Content-Type: application/json
+
+{
+  "content": "Hello, world"  
+}
+
+###
+
+// Get a specific note
+@id_to_get=1
+GET {{host}}:{{port}}/note/{{id_to_get}}
+
+###
